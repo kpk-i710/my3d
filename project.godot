@@ -11,12 +11,17 @@ config_version=5
 [application]
 
 config/name="my3d"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="my3d"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/virtual_joystick/plugin.cfg")
 
 [rendering]
 
