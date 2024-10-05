@@ -13,12 +13,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Virtual Joystick left" type="Control" parent="Control"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
+anchor_top = 0.554012
+anchor_right = 0.263889
 anchor_bottom = 1.0
 grow_vertical = 0
 script = ExtResource("1_y4djn")
+metadata/_edit_use_anchors_ = true
 
 [node name="Virtual Joystick right" type="Control" parent="Control"]
 layout_mode = 1
