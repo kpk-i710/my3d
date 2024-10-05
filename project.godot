@@ -23,6 +23,10 @@ project/assembly_name="my3d"
 
 enabled=PackedStringArray("res://addons/virtual_joystick/plugin.cfg")
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [rendering]
 
 renderer/rendering_method="mobile"
