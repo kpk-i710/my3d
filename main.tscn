@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bm5tte87sp0vv"]
+[gd_scene load_steps=5 format=3 uid="uid://bm5tte87sp0vv"]
 
 [ext_resource type="Script" path="res://addons/virtual_joystick/virtual_joystick_instantiator.gd" id="1_y4djn"]
+[ext_resource type="PackedScene" uid="uid://bdoxetlin0o1x" path="res://character_body_3d.tscn" id="2_2i8sk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5qits"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q18hn"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -34,3 +39,17 @@ offset_top = -289.0
 grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource("1_y4djn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, 0, 0, 0)
+mesh = SubResource("BoxMesh_5qits")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, 0, 0, 0)
+shape = SubResource("BoxShape3D_q18hn")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_2i8sk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07025, 0)
