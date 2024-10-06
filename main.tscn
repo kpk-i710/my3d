@@ -27,19 +27,6 @@ grow_vertical = 0
 script = ExtResource("1_y4djn")
 metadata/_edit_use_anchors_ = true
 
-[node name="Virtual Joystick right" type="Control" parent="Control"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -289.0
-offset_top = -289.0
-grow_horizontal = 0
-grow_vertical = 0
-script = ExtResource("1_y4djn")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
@@ -52,10 +39,11 @@ transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, 0, 0, 0)
 shape = SubResource("BoxShape3D_q18hn")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_2i8sk")]
-transform = Transform3D(-0.997304, 0, 0.0733774, 0, 1, 0, -0.0733774, 0, -0.997304, 0, 2.07025, 0)
+transform = Transform3D(-0.997304, 0, 0.0733774, 0, 1, 0, -0.0733774, 0, -0.997304, 0, 2.25417, -2.71585)
+wall_min_slide_angle = 3.14159
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(0.999584, -0.0126889, 0.0259276, 0.00802233, 0.984935, 0.17274, -0.0277289, -0.17246, 0.984626, -0.0406589, 1.08308, -0.552613)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.55467, 0.83207, 0, -0.83207, -0.55467, 0, 7.93451, 0)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.998923, 0, 0.0463916, 0.00802233, 0.984935, 0.17274, -0.0456927, 0.172926, -0.983874, 0, 3.15333, -6.69996)
