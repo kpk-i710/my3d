@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bm5tte87sp0vv"]
+[gd_scene load_steps=6 format=3 uid="uid://bm5tte87sp0vv"]
 
 [ext_resource type="Script" path="res://addons/virtual_joystick/virtual_joystick_instantiator.gd" id="1_y4djn"]
 [ext_resource type="PackedScene" uid="uid://bdoxetlin0o1x" path="res://character_body_3d.tscn" id="2_2i8sk"]
+[ext_resource type="PackedScene" uid="uid://h4f5cghkci0s" path="res://well.fbx" id="3_3voat"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5qits"]
 
@@ -47,3 +48,6 @@ transform = Transform3D(0.999584, -0.0126889, 0.0259276, 0.00802233, 0.984935, 0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.55467, 0.83207, 0, -0.83207, -0.55467, 0, 7.93451, 0)
+
+[node name="well" parent="." instance=ExtResource("3_3voat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.181723, 0.5, 1.64917)
